@@ -10,19 +10,21 @@
   <div v-else-if="accessLevel === 'marketing'">Usuario: Marketing</div>
   <div v-else>Usuario Normal</div>
 
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <br>
+  <hr>
+
+   <TheSection />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
 import TheHeader from './components/TheHeader.vue';
+import TheSection from './components/TheSection.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
-    TheHeader
+    TheHeader,
+    TheSection,
   },
   // Variaveis reativas
   data() {
@@ -42,8 +44,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px;
 }
 </style>
