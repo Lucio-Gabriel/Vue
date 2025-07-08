@@ -1,8 +1,20 @@
 <template>
     <div>
+        <h1 :class="{ 'title': true, 'title-home': isHome }">
+            Curso VUE 3
+        </h1>
+
+        <p :class="['text', 'title']">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odit dicta sapiente, quas perspiciatis veritatis iure explicabo cupiditate. Eos praesentium quasi, quos natus sint iure nulla quas eaque saepe!
+        </p>
+
+        <p :style="{ 'color': 'blueviolet'}">
+            lipsum dolor sit amet consectetur adipisicing elit. Molestiae expedita odit dicta sapiente, quas perspiciatis veritatis iure explicabo cupiditate. Eos praesentium quasi, quos natus sint iure nulla quas eaque saepe!
+        </p>
+
         <div 
             v-for="(obj, index) in todos" 
-            v-bind:key="obj.id" 
+            :key="obj.id" 
             class="todos-item"
         >
             <img 
@@ -20,6 +32,9 @@ export default {
     name: 'TheSection',
     data() {
         return {
+            isHome: false,
+            classVar: 'title',
+            pClass: 'text',
             todos: [
                 {
                     "userId": 1,
@@ -60,6 +75,20 @@ export default {
 </script>
 
 <style>
+.title{
+    font-size: 20;
+    color: blue;
+}
+
+.title-home {
+    font-size: 40px;
+    color: green;
+}
+
+.text {
+    color: red;
+}
+
 .todos-item {
     background: #000;
     margin: 0 0 5px 0;
