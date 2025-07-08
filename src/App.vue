@@ -14,17 +14,20 @@
   <hr>
 
    <TheSection />
+   <TheForm />
 </template>
 
 <script>
 import TheHeader from './components/TheHeader.vue';
 import TheSection from './components/TheSection.vue';
+import TheForm from './components/TheForm.vue';
 
 export default {
   name: 'App',
   components: {
     TheHeader,
     TheSection,
+    TheForm,
   },
   // Variaveis reativas
   data() {
